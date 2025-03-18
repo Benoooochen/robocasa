@@ -187,6 +187,14 @@ class Cabinet(ProcGenFixture):
             panel_class = DividedWindowCabinetPanel
         elif self.panel_type == "full_window":
             panel_class = FullWindowedCabinetPanel
+        elif self.panel_type == "wood_slab":
+            panel_class = ExtraCabinetPanel
+        elif self.panel_type == "beige_slab":
+            panel_class = BeigeSlabCabinetPanel
+        elif self.panel_type == "red_slab":
+            panel_class = RedSlabCabinetPanel
+        elif self.panel_type == "vertical_grain":
+            panel_class = VerticalGrainCabinetPanel
         elif self.panel_type == "no_panel":
             # Partially implemented - size/pos of body will still assume panel in front
             return

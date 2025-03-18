@@ -98,7 +98,7 @@ class CabinetPanel(MujocoXMLObject):
             return
 
         self.texture = xml_path_completion(
-            self.texture, root=robocasa.models.assets_root
+            self.texture, root=robocasa.models.assets_root  
         )
         texture = find_elements(
             self.root, tags="texture", attribs={"name": "tex"}, return_first=True
@@ -136,6 +136,22 @@ class CabinetPanel(MujocoXMLObject):
             hpad = 0.05
         elif self.handle_type == "boxed":
             handle_class = BoxedHandle
+            vpad = 0.20
+            hpad = 0.05
+        elif self.handle_type == "irregularity":
+            handle_class = IrregularityHandle
+            vpad = 0.20
+            hpad = 0.05
+        elif self.handle_type == "flat":
+            handle_class = FlatHandle
+            vpad = 0.20
+            hpad = 0.05
+        elif self.handle_type == "protruding_rectangular":
+            handle_class = ProtrudingRectangularHandle
+            vpad = 0.20
+            hpad = 0.05
+        elif self.handle_type == "rectangular":
+            handle_class = RectangularHandle
             vpad = 0.20
             hpad = 0.05
         else:
@@ -559,3 +575,145 @@ class CabinetShelf(MujocoXMLObject):
         sizes = {"shelf": self.size / 2}
         positions = {"shelf": self.pos}
         set_geom_dimensions(sizes, positions, geoms)
+
+
+class ExtraCabinetPanel(CabinetPanel):
+    """
+    Initialize a wood slab cabinet panel, which is a panel door with wood texture.
+    """
+    def __init__(self, *args, **kwargs):
+        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/wood_slab_door/model.xml"
+        super().__init__(*args, **kwargs)
+
+    def _get_components(self):
+        """
+        Gets the geoms for the cabinet panel.
+        """
+        geom_names = ["door"]
+        return self._get_elements_by_name(geom_names)[0]
+
+    def _create_panel(self):
+        """
+        Creates the cabinet panel. This involves setting the size and position of the panel's geom
+        """
+        geoms = self._get_components()
+        size = [1, 1, 1]
+        for i, geom in geoms.items():
+            # get size
+            size = geom[0].get("size").split(" ")
+            break
+
+        # remove door_vis in geoms
+        # divide by 2 for mujoco convention
+        x, y, z = [dim / 2 for dim in self.size]
+
+        scale = [ x / float(size[0]), y / float(size[1]), z / float(size[2])]
+
+        self.set_scale(scale)
+
+
+class RedSlabCabinetPanel(CabinetPanel):
+    """
+    Initialize a wood slab cabinet panel, which is a panel door with frame grain.
+    """
+    def __init__(self, *args, **kwargs):
+        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/red_slab_door/model.xml"
+        super().__init__(*args, **kwargs)
+
+    def _get_components(self):
+        """
+        Gets the geoms for the cabinet panel.
+        """
+        geom_names = ["door"]
+        return self._get_elements_by_name(geom_names)[0]
+
+    def _create_panel(self):
+        """
+        Creates the cabinet panel. This involves setting the size and position of the panel's geom
+        """
+        geoms = self._get_components()
+        size = [1, 1, 1]
+        for i, geom in geoms.items():
+            # get size
+            size = geom[0].get("size").split(" ")
+            break
+
+        # remove door_vis in geoms
+        # divide by 2 for mujoco convention
+        x, y, z = [dim / 2 for dim in self.size]
+
+        scale = [ x / float(size[0]), y / float(size[1]), z / float(size[2])]
+
+        self.set_scale(scale)
+
+
+class BeigeSlabCabinetPanel(CabinetPanel):
+    """
+    Initialize a Beige cabinet panel, which is a simple flat panel with beige texture.
+    """
+
+    def __init__(self, *args, **kwargs):
+        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/beige_slab_door/model.xml"
+        super().__init__(*args, **kwargs)
+
+    def _get_components(self):
+        """
+        Gets the geoms for the cabinet panel.
+        """
+        geom_names = ["door"]
+        return self._get_elements_by_name(geom_names)[0]
+
+    def _create_panel(self):
+        """
+        Creates the cabinet panel. This involves setting the size and position of the panel's geom
+        """
+        geoms = self._get_components()
+        size = [1, 1, 1]
+        for i, geom in geoms.items():
+            # get size
+            size = geom[0].get("size").split(" ")
+            break
+
+        # remove door_vis in geoms
+        # divide by 2 for mujoco convention
+        x, y, z = [dim / 2 for dim in self.size]
+
+        scale = [ x / float(size[0]), y / float(size[1]), z / float(size[2])]
+
+        self.set_scale(scale)
+
+
+class VerticalGrainCabinetPanel(CabinetPanel):
+    """
+    Initialize a VerticalGrain cabinet panel, which is a simple flat panel with a verticalGrain board.
+    """
+
+    def __init__(self,  *args, **kwargs):
+        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/vertical_grain_door/model.xml"
+        super().__init__(*args, **kwargs)
+
+    def _get_components(self):
+        """
+        Gets the geoms for the cabinet panel.
+        """
+        geom_names = ["door"]
+        return self._get_elements_by_name(geom_names)[0]
+
+    def _create_panel(self):
+        """
+        Creates the cabinet panel. This involves setting the size and position of the panel's geom
+        """
+        geoms = self._get_components()
+        size = [1, 1, 1]
+        for i, geom in geoms.items():
+            # get size
+            size = geom[0].get("size").split(" ")
+            break
+
+        # remove door_vis in geoms
+        # divide by 2 for mujoco convention
+        x, y, z = [dim / 2 for dim in self.size]
+
+        scale = [ x / float(size[0]), y / float(size[1]), z / float(size[2])]
+
+        self.set_scale(scale)
