@@ -696,7 +696,7 @@ class VerticalGrainCabinetPanel(CabinetPanel):
         """
         Gets the geoms for the cabinet panel.
         """
-        geom_names = ["door"]
+        geom_names = ["reg_main"]
         return self._get_elements_by_name(geom_names)[0]
 
     def _create_panel(self):
