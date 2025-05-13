@@ -145,6 +145,7 @@ main_group_1:
 
     - name: singlecabinet_1
       type: single_cabinet
+      default_config_name: cab_top
       pos: [-5.0765, -0.2, 1.84]
       size: [0.607442, 0.4, 0.92]
       orientation: left

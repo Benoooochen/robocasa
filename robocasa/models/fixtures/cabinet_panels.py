@@ -589,7 +589,7 @@ class ExtraCabinetPanel(CabinetPanel):
         """
         Gets the geoms for the cabinet panel.
         """
-        geom_names = ["door"]
+        geom_names = ["region_main"]
         return self._get_elements_by_name(geom_names)[0]
 
     def _create_panel(self):
@@ -624,7 +624,7 @@ class RedSlabCabinetPanel(CabinetPanel):
         """
         Gets the geoms for the cabinet panel.
         """
-        geom_names = ["door"]
+        geom_names = ["region_main"]
         return self._get_elements_by_name(geom_names)[0]
 
     def _create_panel(self):
@@ -660,7 +660,7 @@ class BeigeSlabCabinetPanel(CabinetPanel):
         """
         Gets the geoms for the cabinet panel.
         """
-        geom_names = ["door"]
+        geom_names = ["region_main"]
         return self._get_elements_by_name(geom_names)[0]
 
     def _create_panel(self):
