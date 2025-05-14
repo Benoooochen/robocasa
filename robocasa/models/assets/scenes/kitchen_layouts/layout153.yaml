@@ -127,25 +127,28 @@ main_group_1:
 
     - name: hingecabinet_2
       type: hinge_cabinet
+      default_config_name: cab_top
       pos: [-0.9223, -0.2, 1.84]
       size: [1.044652, 0.4, 0.92]
       panel_config: {'handle_vpos': 'bottom'}
 
     - name: hingecabinet_5
       type: hinge_cabinet
+      default_config_name: cab_top
       pos: [-7.6179, -0.2, 1.84]
       size: [0.898452, 0.4, 0.92]
       panel_config: {'handle_vpos': 'bottom'}
 
     - name: hingecabinet_3
       type: hinge_cabinet
+      default_config_name: cab_top
       pos: [-2.6066, -0.2, 1.84]
       size: [0.803887, 0.4, 0.92]
       panel_config: {'handle_vpos': 'bottom'}
 
     - name: singlecabinet_1
       type: single_cabinet
-      default_config_name: cab_top
+      default_config_name: cab_top_single
       pos: [-5.0765, -0.2, 1.84]
       size: [0.607442, 0.4, 0.92]
       orientation: left
@@ -158,6 +161,7 @@ main_group_1:
 
     - name: hingecabinet_6
       type: hinge_cabinet
+      default_config_name: cab_top
       pos: [-6.7194, -0.2, 1.84]
       size: [0.898452, 0.4, 0.92]
       panel_config: {'handle_vpos': 'bottom'}
@@ -310,12 +314,14 @@ right_group_1:
   top_row_2:
     - name: hingecabinet_1
       type: hinge_cabinet
+      default_config_name: cab_top
       pos: [-1.9362, -0.2, 1.84]
       size: [1.22872, 0.4, 0.92]
       panel_config: {'handle_vpos': 'bottom'}
 
     - name: singlecabinet_3
       type: single_cabinet
+      default_config_name: cab_top_single
       pos: [-4.9424, -0.2, 1.84]
       size: [0.600001, 0.4, 0.92]
       orientation: left

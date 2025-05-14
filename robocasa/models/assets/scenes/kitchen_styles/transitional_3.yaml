@@ -1,9 +1,9 @@
 # fixtures using primitive geoms
 cabinet:
   default: panel_handle_mix
-  cab_top: [vertical_grain_mix]
+  cab_top: [beige_slab_mix]
+  cab_top_single: [vertical_grain_mix]
   cab_top_small: [red_slab_mix]
-  cab_bottom: [beige_slab_mix]
   shelves: dark_wood_planks_shelves
 counter: 
   default: gray_base_marble_top_2

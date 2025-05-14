@@ -19,7 +19,7 @@
     <worldbody>
         <body>
             <body name="object">
-                <geom class="region" type="box" pos="0.0 0.0 0.0" size="0.222 0.01048317737877369 0.352" quat="1.0 0.0 0.0 0.0" name="region_main"/>
+                <geom class="region" type="box" pos="0.0 0.0 0.0" size="0.222 0.02 0.352" quat="1.0 0.0 0.0 0.0" name="region_main"/>
                 <geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat"/>
                 <geom class="collision" type="box" pos="0.0 0.0 0.0" size="0.2184571623802185 0.01048317737877369 0.347447007894516" quat="1.0 0.0 0.0 0.0" name="door"/>
             </body>

@@ -150,13 +150,13 @@ vertical_grain_mix:
 
 red_slab_mix:
   panel_type: red_slab
-  handle_type: bar
+  handle_type: rectangular
   texture: textures/flat/light_beige.png
 
 
 beige_slab_mix:
   panel_type: beige_slab
-  handle_type: bar
+  handle_type: rectangular
   texture: textures/flat/dark_beige.png
 
 
