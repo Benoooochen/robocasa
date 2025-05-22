@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mujoco model="model">
+    <compiler angle="radian" />
+    <asset>
+        <mesh file="visuals/CabinetDoorPanel039.obj" name="mesh" />
+        <texture file="visuals/T_BC001.png" name="tex" type="2d" />
+        <material name="mat" rgba="1 1 1 1.0" texture="tex" shininess="-1.0" specular="0.3103448502657381" />
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh" />
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0 0 0 0" />
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="0 0 0 0" contype="0" conaffinity="0" />
+            <site group="0" rgba="0 0 0 0" />
+        </default>
+    <default class="region"><geom group="1" conaffinity="0" contype="0" rgba="0 0 0 0" /></default></default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom class="region" type="box" pos="0.0 0.008525611832737923 0.0" size="0.19801276516914368 0.02776595577597618 0.3008872528076172" quat="1.0 0.0 0.0 0.0" name="region_main" /><geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat" />
+                <geom class="collision" type="box" pos="0.0 0.008525611832737923 0.0" size="0.19601276516914368 0.01388297788798809 0.2988872528076172" quat="1.0 0.0 0.0 0.0" name="door" />
+            </body>
+        </body>
+    </worldbody>
+    <actuator />
+</mujoco>

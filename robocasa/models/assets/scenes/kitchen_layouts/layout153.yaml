@@ -152,7 +152,6 @@ main_group_1:
       pos: [-5.0765, -0.2, 1.84]
       size: [0.607442, 0.4, 0.92]
       orientation: left
-      panel_config: {'handle_hpos': 'left', 'handle_vpos': 'bottom'}
 
     - name: cube_2
       type: box
@@ -301,6 +300,7 @@ main_group_1:
 
     - name: hingecabinet_4
       type: hinge_cabinet
+      default_config_name: cab_top_small
       size: [0.89, 0.8, 0.5]
       alignment: back
       align_to: fridgefrenchdoor_housing
@@ -325,7 +325,6 @@ right_group_1:
       pos: [-4.9424, -0.2, 1.84]
       size: [0.600001, 0.4, 0.92]
       orientation: left
-      panel_config: {'handle_hpos': 'left', 'handle_vpos': 'bottom'}
 
   bottom_row_2:
     - name: counter_4

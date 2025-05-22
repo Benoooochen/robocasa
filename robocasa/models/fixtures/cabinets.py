@@ -195,6 +195,8 @@ class Cabinet(ProcGenFixture):
             panel_class = RedSlabCabinetPanel
         elif self.panel_type == "vertical_grain":
             panel_class = VerticalGrainCabinetPanel
+        elif self.panel_type == "lw_cabinet_panel":
+            panel_class = LwCabinetPanel
         elif self.panel_type == "no_panel":
             # Partially implemented - size/pos of body will still assume panel in front
             return
@@ -203,6 +205,7 @@ class Cabinet(ProcGenFixture):
         dg = self.door_gap
 
         panel_config = deepcopy(self.panel_config)
+        print(panel_config)
         panel_config["handle_hpos"] = handle_hpos
         panel_config["handle_vpos"] = handle_vpos
 

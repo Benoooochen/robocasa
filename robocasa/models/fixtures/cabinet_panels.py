@@ -579,11 +579,19 @@ class CabinetShelf(MujocoXMLObject):
 
 class ExtraCabinetPanel(CabinetPanel):
     """
-    Initialize a wood slab cabinet panel, which is a panel door with wood texture.
+    Initialize a cabinet panel with custom xml model.
     """
     def __init__(self, *args, **kwargs):
-        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/wood_slab_door/model.xml"
-        super().__init__(*args, **kwargs)
+        if 'xml' in kwargs:
+            xml = kwargs.pop('xml')
+        else:
+            xml = self.default_xml
+        super().__init__(xml, *args, **kwargs)
+
+    @property
+    def default_xml(self):
+        """Default xml path for the panel"""
+        return "fixtures/cabinets/cabinet_panels/wood_slab_door/model.xml"
 
     def _get_components(self):
         """
@@ -612,13 +620,48 @@ class ExtraCabinetPanel(CabinetPanel):
         self.set_scale(scale)
 
 
-class RedSlabCabinetPanel(CabinetPanel):
+class RedSlabCabinetPanel(ExtraCabinetPanel):
     """
-    Initialize a wood slab cabinet panel, which is a panel door with frame grain.
+    Initialize a red slab cabinet panel.
+    """
+    @property
+    def default_xml(self):
+        return "fixtures/cabinets/cabinet_panels/red_slab_door/model.xml"
+
+
+class BeigeSlabCabinetPanel(ExtraCabinetPanel):
+    """
+    Initialize a beige slab cabinet panel.
+    """
+    @property
+    def default_xml(self):
+        return "fixtures/cabinets/cabinet_panels/beige_slab_door/model.xml"
+
+
+class VerticalGrainCabinetPanel(ExtraCabinetPanel):
+    """
+    Initialize a vertical grain cabinet panel.
+    """
+    @property
+    def default_xml(self):
+        return "fixtures/cabinets/cabinet_panels/vertical_grain_door/model.xml"
+
+
+class LwCabinetPanel(CabinetPanel):
+    """
+    Initialize a cabinet panel with custom xml model.
     """
     def __init__(self, *args, **kwargs):
-        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/red_slab_door/model.xml"
-        super().__init__(*args, **kwargs)
+        if 'xml' in kwargs:
+            xml = kwargs.pop('xml')
+        else:
+            xml = self.default_xml
+        super().__init__(xml, *args, **kwargs)
+
+    @property
+    def default_xml(self):
+        """Default xml path for the panel"""
+        return "fixtures/cabinets/cabinet_panels/wood_slab_door/model.xml"
 
     def _get_components(self):
         """
@@ -627,77 +670,16 @@ class RedSlabCabinetPanel(CabinetPanel):
         geom_names = ["region_main"]
         return self._get_elements_by_name(geom_names)[0]
 
-    def _create_panel(self):
+    def _set_texture(self):
         """
-        Creates the cabinet panel. This involves setting the size and position of the panel's geom
+        设置面板的纹理。如果模型文件夹中已有默认纹理，则优先使用默认纹理。
         """
-        geoms = self._get_components()
-        size = [1, 1, 1]
-        for i, geom in geoms.items():
-            # get size
-            size = geom[0].get("size").split(" ")
-            break
-
-        # remove door_vis in geoms
-        # divide by 2 for mujoco convention
-        x, y, z = [dim / 2 for dim in self.size]
-
-        scale = [ x / float(size[0]), y / float(size[1]), z / float(size[2])]
-
-        self.set_scale(scale)
-
-
-class BeigeSlabCabinetPanel(CabinetPanel):
-    """
-    Initialize a Beige cabinet panel, which is a simple flat panel with beige texture.
-    """
-
-    def __init__(self, *args, **kwargs):
-        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/beige_slab_door/model.xml"
-        super().__init__(*args, **kwargs)
-
-    def _get_components(self):
-        """
-        Gets the geoms for the cabinet panel.
-        """
-        geom_names = ["region_main"]
-        return self._get_elements_by_name(geom_names)[0]
-
-    def _create_panel(self):
-        """
-        Creates the cabinet panel. This involves setting the size and position of the panel's geom
-        """
-        geoms = self._get_components()
-        size = [1, 1, 1]
-        for i, geom in geoms.items():
-            # get size
-            size = geom[0].get("size").split(" ")
-            break
-
-        # remove door_vis in geoms
-        # divide by 2 for mujoco convention
-        x, y, z = [dim / 2 for dim in self.size]
-
-        scale = [ x / float(size[0]), y / float(size[1]), z / float(size[2])]
-
-        self.set_scale(scale)
-
-
-class VerticalGrainCabinetPanel(CabinetPanel):
-    """
-    Initialize a VerticalGrain cabinet panel, which is a simple flat panel with a verticalGrain board.
-    """
-
-    def __init__(self,  *args, **kwargs):
-        kwargs['xml'] = "fixtures/cabinets/cabinet_panels/vertical_grain_door/model.xml"
-        super().__init__(*args, **kwargs)
-
-    def _get_components(self):
-        """
-        Gets the geoms for the cabinet panel.
-        """
-        geom_names = ["reg_main"]
-        return self._get_elements_by_name(geom_names)[0]
+        # 如果没有指定新的纹理，直接返回，保持模型原有的纹理
+        if self.texture is None:
+            return
+        
+        # 如果指定了新的纹理，则调用父类方法覆盖原有纹理
+        return super()._set_texture()
 
     def _create_panel(self):
         """

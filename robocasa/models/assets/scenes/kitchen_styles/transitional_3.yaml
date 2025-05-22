@@ -2,7 +2,7 @@
 cabinet:
   default: panel_handle_mix
   cab_top: [beige_slab_mix]
-  cab_top_single: [vertical_grain_mix]
+  cab_top_single: lw_cabinet_panel
   cab_top_small: [red_slab_mix]
   shelves: dark_wood_planks_shelves
 counter: 

@@ -139,24 +139,38 @@ handle_dark_gray_2:
 
 panel_handle_mix:
   panel_type: wood_slab
+  panel_config:
+    xml: fixtures/cabinets/cabinet_panels/wood_slab_door/model.xml
   handle_type: irregularity
   texture: textures/wood/wood_grain_4.png
 
 vertical_grain_mix:
   panel_type: vertical_grain
-  handle_type: rectangular
+  panel_config:
+    xml: fixtures/cabinets/cabinet_panels/vertical_grain_door/model.xml
+  handle_type: protruding_rectangular
   texture: textures/flat/dark_beige_2.png
 
 
 red_slab_mix:
   panel_type: red_slab
-  handle_type: rectangular
+  panel_config:
+    xml: fixtures/cabinets/cabinet_panels/red_slab_door/model.xml
+  handle_type: flat
   texture: textures/flat/light_beige.png
 
 
 beige_slab_mix:
   panel_type: beige_slab
+  panel_config:
+    xml: fixtures/cabinets/cabinet_panels/beige_slab_door/model.xml
   handle_type: rectangular
   texture: textures/flat/dark_beige.png
 
 
+
+lw_cabinet_panel:
+  panel_type: lw_cabinet_panel
+  panel_config:
+    xml: fixtures/cabinets/cabinet_panels/CabinetDoorPanel048/model.xml
+  handle_type: rectangular
