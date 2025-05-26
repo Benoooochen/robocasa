@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/CabinetHandle010.obj" name="mesh"/>
+        <texture file="visuals/T_BC001.png" name="tex" type="2d"/>
+        <material name="mat" rgba="1 1 1 1.0" texture="tex" shininess="2" specular="1"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0 0 0 0"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="0 0 0 0" contype="0" conaffinity="0"/>
+            <site group="0" rgba="0 0 0 0"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat"/>
+                <geom class="collision" type="cylinder" pos="0.0 -0.005160082131624222 0.07152626663446426" size="0.010653411969542503 0.010653411969542503" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="cylinder" pos="0.0 -0.005160082131624222 -0.0717424750328064" size="0.010653411969542503 0.010653411969542503" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="-1.5903632537295627e-17 0.005621281918138266 0.07162359356880188" size="0.010529065504670143 0.010529065504670143 0.010529065504670143" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="-1.5903632537295627e-17 0.005621281918138266 -0.07162664830684662" size="0.010529065504670143 0.010529065504670143 0.010529065504670143" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="5.780190622317605e-05 -0.008265664801001549 0.00010503455996513367" size="0.010635427199304104 0.003022677032276988 0.06161217391490936" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="5.780190622317605e-05 -0.013515489175915718 0.00010503455996513367" size="0.008648472838103771 0.0023121268022805452 0.06161217391490936" quat="1.0 0.0 0.0 0.0"/>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

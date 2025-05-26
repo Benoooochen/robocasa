@@ -26,3 +26,9 @@ shutter:
 grid_window:
   xml: fixtures/windows/grid_window
   pos: [1.5, 0, 1.5]
+
+
+lw_window:
+  xml: fixtures/windows/Window029
+  pos: [1.5, 0, 1.5]
+  scale: 0.5

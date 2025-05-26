@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/Window035.obj" name="Window035_vis"/>
+        <mesh file="visuals/Clear.obj" name="Window035_Clear_vis"/>
+        <texture file="visuals/T_BC001.png" name="Window035_material" type="2d"/>
+        <material name="Window035_material" rgba="1 1 1 1.0" texture="Window035_material" shininess="0.5" specular="0.3103448502657381"/>
+        <texture file="visuals/T_BC001.png" name="Window035_Clear_material" type="2d"/>
+        <material name="Window035_Clear_material" rgba="1 1 1 0.1168384999036789" texture="Window035_Clear_material" shininess="0.5" specular="0.3103448502657381"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0.5 0 0 0.5"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="1 1 1 0.5" contype="0" conaffinity="0"/>
+            <site group="0" rgba="1 1 1 0.5"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="Window035_vis" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="Window035_material"/>
+                <geom class="collision" type="box" pos="0.002391556743532419 -0.00048100948333740234 0.0002523341972846538" size="0.7747581005096436 0.07707931846380234 0.7719430327415466" quat="1.0 0.0 0.0 0.0"/>
+                <body name="Window035_Clear">
+                    <geom mesh="Window035_Clear_vis" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="Window035_Clear_material"/>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/CabinetHandle043.obj" name="mesh"/>
+        <texture file="visuals/T_BC001.png" name="tex" type="2d"/>
+        <material name="mat" rgba="1 1 1 1.0" texture="tex" shininess="0.4472135901451111" specular="0.3103448502657381"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0 0 0 0"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="0 0 0 0" contype="0" conaffinity="0"/>
+            <site group="0" rgba="0 0 0 0"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat"/>
+                <geom class="collision" type="box" pos="-7.639741909842023e-19 -0.015969404950737953 0.0034406338818371296" size="0.007774855475872755 0.006022720597684383 0.04577995836734772" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="-1.5091763037880955e-17 -0.011884115636348724 0.0679672583937645" size="0.007774855475872755 0.0060227192007005215 0.024288201704621315" quat="0.9952884912490845 -0.09695758670568466 2.152890903454822e-17 4.357184857566874e-24"/>
+                <geom class="collision" type="box" pos="1.444767223647164e-17 -0.012093618512153625 -0.06506653130054474" size="0.007774855475872755 0.0060227192007005215 0.024288201704621315" quat="0.9965286254882812 0.08325078338384628 -1.848539061488796e-17 8.05291142382774e-24"/>
+                <geom class="collision" type="box" pos="2.0355558298725424e-17 -0.0006757578230462968 -0.09167328476905823" size="0.007774855475872755 0.006022718269377947 0.012194736860692501" quat="0.8756933212280273 0.48286768794059753 -1.0721818485216799e-16 -1.2840199024139214e-23"/>
+                <geom class="collision" type="box" pos="2.2495451382342955e-17 0.013256251811981201 -0.09606611728668213" size="0.007774855475872755 0.0060227192007005215 0.008473028428852558" quat="0.7135644555091858 0.7005895972251892 -1.5556216680023355e-16 -2.1735713291217052e-23"/>
+                <geom class="collision" type="box" pos="-2.0462057802591626e-17 0.000877154991030693 0.0921529158949852" size="0.007774855475872755 0.0060227192007005215 0.012194737792015076" quat="0.5521039962768555 0.8337752223014832 -1.8513530306710278e-16 -2.107348664938936e-23"/>
+                <geom class="collision" type="box" pos="-2.0075610600935428e-17 0.013466737233102322 0.09565690159797668" size="0.007774855475872755 0.00870534684509039 0.006349595729261637" quat="1.0 0.0 0.0 0.0"/>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

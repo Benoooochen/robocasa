@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/CabinetHandle042.obj" name="mesh"/>
+        <texture file="visuals/T_BC001.png" name="tex" type="2d"/>
+        <material name="mat" rgba="1 1 1 1.0" texture="tex" shininess="0.4472135901451111" specular="0.3103448502657381"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0 0 0 0"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="0 0 0 0" contype="0" conaffinity="0"/>
+            <site group="0" rgba="0 0 0 0"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat"/>
+                <geom class="collision" type="cylinder" pos="0.0 -0.0030496064573526382 -0.00028252415359020233" size="0.026180727407336235 0.04154050350189209" quat="1.0 0.0 0.0 0.0"/>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

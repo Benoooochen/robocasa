@@ -173,4 +173,9 @@ lw_cabinet_panel:
   panel_type: lw_cabinet_panel
   panel_config:
     xml: fixtures/cabinets/cabinet_panels/CabinetDoorPanel048/model.xml
-  handle_type: rectangular
+  handle_type: lw_handle
+  handle_config:
+    xml: fixtures/handles/CabinetHandle005/model.xml
+
+
+

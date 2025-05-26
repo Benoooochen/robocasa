@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/CabinetHandle029.obj" name="mesh"/>
+        <texture file="visuals/T_BC001.png" name="tex" type="2d"/>
+        <material name="mat" rgba="1 1 1 1.0" texture="tex" shininess="0.5999999940395355" specular="0.8"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0 0 0 0"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="0 0 0 0" contype="0" conaffinity="0"/>
+            <site group="0" rgba="0 0 0 0"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat"/>
+                <geom class="collision" type="box" pos="1.7507880329503678e-05 -0.034541189670562744 1.9064249499933794e-05" size="0.5351306200027466 0.018585536628961563 0.016708076000213623" quat="0.7071068286895752 -0.0 0.7071067690849304 0.0"/>
+                <geom class="collision" type="cylinder" pos="1.952052116394043e-05 0.014784444123506546 -0.4674508571624756" size="0.010716565884649754 0.03486405685544014" quat="0.4999999701976776 0.5000000596046448 0.4999999403953552 -0.5"/>
+                <geom class="collision" type="cylinder" pos="1.952052116394043e-05 0.051293328404426575 -0.4674508571624756" size="0.023220378905534744 0.0017810611752793193" quat="0.4999999701976776 0.5000000596046448 0.4999999403953552 -0.5"/>
+                <geom class="collision" type="cylinder" pos="1.9550323486328125e-05 0.014784444123506546 0.4674488306045532" size="0.010716565884649754 0.03486405685544014" quat="0.4999999701976776 0.5000000596046448 0.4999999403953552 -0.5"/>
+                <geom class="collision" type="cylinder" pos="1.9550323486328125e-05 0.051293328404426575 0.4674488306045532" size="0.023220378905534744 0.0017810611752793193" quat="0.4999999701976776 0.5000000596046448 0.4999999403953552 -0.5"/>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

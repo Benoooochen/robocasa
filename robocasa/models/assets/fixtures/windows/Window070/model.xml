@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/Window070.obj" name="Window070_vis"/>
+        <mesh file="visuals/Cleat.obj" name="Window070_Cleat_vis"/>
+        <texture file="visuals/T_BC001.png" name="Window070_material" type="2d"/>
+        <material name="Window070_material" rgba="1 1 1 1.0" texture="Window070_material" shininess="0.10000002384185791" specular="0.33333333333333337"/>
+        <texture file="visuals/T_BC001.png" name="Window070_Cleat_material" type="2d"/>
+        <material name="Window070_Cleat_material" rgba="1 1 1 0.10000000149011612" texture="Window070_Cleat_material" shininess="0.5" specular="0.3103448502657381"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0.5 0 0 0.5"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="1 1 1 0.5" contype="0" conaffinity="0"/>
+            <site group="0" rgba="1 1 1 0.5"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="Window070_vis" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="Window070_material"/>
+                <geom class="collision" type="box" pos="-0.0019397735595703125 0.0 0.0008546710014343262" size="0.9439324736595154 0.0266367606818676 0.6427589058876038" quat="1.0 0.0 0.0 0.0"/>
+                <body name="Window070_Cleat">
+                    <geom mesh="Window070_Cleat_vis" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="Window070_Cleat_material"/>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

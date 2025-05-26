@@ -325,7 +325,6 @@ class ExtraHandle(MujocoXMLObject):
         texture=None,
         length=0.24,
         handle_pad=0.05,
-        handle_size=None,
         orientation="vertical"
     ):
         super().__init__(
@@ -343,8 +342,6 @@ class ExtraHandle(MujocoXMLObject):
 
         self.panel_w = panel_w
         self.panel_h = panel_h
-
-        self.handle_size = np.concatenate([handle_size, [self.length / 2]])
 
         self._create_handle()
 
@@ -367,20 +364,10 @@ class ExtraHandle(MujocoXMLObject):
         if self.panel_h < self.length + 2 * self.handle_pad:
             self.length = self.panel_h - 2 * self.handle_pad
 
-        conn_len = 0.1
-
-        # positions = {"handle": np.array([0, -conn_len, 0])}
-
-        # # positions = np.array([0, conn_len, 0])
-        # self._obj.set("pos", a2s(positions["handle"]))
 
         if self.orientation == "vertical":
             euler = np.array([0, 1.5708, 0])
             self._obj.set("euler", a2s(euler))
-
-
-
-
 
     def _set_texture(self):
         """
@@ -411,12 +398,11 @@ class IrregularityHandle(ExtraHandle):
         self,
         xml="fixtures/handles/irregularity_handle/model.xml",
         name="irregularity_handle",
-        handle_size=[0.01],
         *args,
         **kwargs
     ):
 
-        super().__init__(xml=xml, name=name, handle_size=handle_size, *args, **kwargs)
+        super().__init__(xml=xml, name=name, *args, **kwargs)
 
 
 class FlatHandle(ExtraHandle):
@@ -428,11 +414,10 @@ class FlatHandle(ExtraHandle):
         self,
         xml="fixtures/handles/flat_handle/model.xml",
         name="flat_handle",
-        handle_size=[0.01],
         *args,
         **kwargs
     ):
-        super().__init__(xml=xml, name=name, handle_size=handle_size, *args, **kwargs)
+        super().__init__(xml=xml, name=name,  *args, **kwargs)
     
 
 
@@ -446,11 +431,10 @@ class RectangularHandle(ExtraHandle):
         self,
         xml="fixtures/handles/rectangular_handle/model.xml",
         name="rectangular_handle",
-        handle_size=[0.01, 0.01],
         *args,
         **kwargs
     ):
-        super().__init__(xml=xml, name=name, handle_size=handle_size, *args, **kwargs)
+        super().__init__(xml=xml, name=name, *args, **kwargs)
 
 
 class ProtrudingRectangularHandle(ExtraHandle):
@@ -461,10 +445,37 @@ class ProtrudingRectangularHandle(ExtraHandle):
             self,
             xml="fixtures/handles/protruding_rectangular_handle/model.xml",
             name="protruding_rectangular_handle",
-            handle_size=[0.01, 0.01],
             *args,
             **kwargs
     ):
-        super().__init__(xml=xml, name=name, handle_size=handle_size, *args, **kwargs)
+        super().__init__(xml=xml, name=name,  *args, **kwargs)
 
 
+class LwHandle(ExtraHandle):
+    """
+    Creates a long handle
+    """
+    def __init__(self, 
+                 xml,
+                 name="lw_handle",
+                 orientation="vertical",
+                 *args,
+                 **kwargs):
+        super().__init__(xml=xml, name=name, orientation=orientation, *args, **kwargs)
+
+    def _create_handle(self):
+        """
+        计算并设置把手的位置和大小，绕 y 轴旋转 90 度
+        """
+        # 调整把手大小（如果需要）
+        if self.panel_h < self.length + 2 * self.handle_pad:
+            self.length = self.panel_h - 2 * self.handle_pad
+
+
+        if not self.orientation == "vertical":
+            # 绕 y 轴旋转 90 度（π/2 弧度）
+            euler = np.array([0, np.pi/2, 0])
+            self._obj.set("euler", a2s(euler))
+
+        
+        

@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/CabinetHandle050.obj" name="mesh"/>
+        <texture file="visuals/T_BC001.png" name="tex" type="2d"/>
+        <material name="mat" rgba="1 1 1 1.0" texture="tex" shininess="0.4472135901451111" specular="0.3103448502657381"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0 0 0 0"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="0 0 0 0" contype="0" conaffinity="0"/>
+            <site group="0" rgba="0 0 0 0"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat"/>
+                <geom class="collision" type="box" pos="-0.00027094068354927003 -0.024711977690458298 -8.977413381217048e-05" size="0.016219280660152435 0.006619834806770086 0.31597331166267395" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="-0.00027094068354927003 0.004204127937555313 0.30543968081474304" size="0.016219280660152435 0.022256607189774513 0.010443865321576595" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="-7.741441368125379e-05 0.028946205973625183 0.3202008605003357" size="0.016412807628512383 0.002276744693517685 0.02520504593849182" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="-7.741441368125379e-05 0.028946205973625183 -0.32024702429771423" size="0.016412807628512383 0.002276744693517685 0.02520504593849182" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="box" pos="-0.00027094068354927003 0.004204127937555313 -0.3054858446121216" size="0.016219280660152435 0.022256607189774513 0.010443865321576595" quat="1.0 0.0 0.0 0.0"/>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

@@ -371,7 +371,7 @@ class ExtraWindow(MujocoXMLObjectRobocasa):
             scale=scale,
         )
 
-        self.pos = pos
+        self.pos = self.set_pos(pos)
 
         if rng is not None:
             self.rng = rng

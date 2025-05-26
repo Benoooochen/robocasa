@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mujoco model="model">
+    <compiler angle="radian"/>
+    <asset>
+        <mesh file="visuals/Window042.obj" name="Window042_vis"/>
+        <mesh file="visuals/Clear.obj" name="Window042_Clear_vis"/>
+        <texture file="visuals/T_BC001.png" name="Window042_material" type="2d"/>
+        <material name="Window042_material" rgba="1 1 1 1.0" texture="Window042_material" shininess="0.141421377658844" specular="0.3103448502657381"/>
+        <texture file="visuals/T_BC001.png" name="Window042_Clear_material" type="2d"/>
+        <material name="Window042_Clear_material" rgba="1 1 1 0.1485714614391327" texture="Window042_Clear_material" shininess="0.141421377658844" specular="0.3103448502657381"/>
+    </asset>
+    <default>
+        <default class="visual">
+            <geom conaffinity="0" contype="0" group="1" type="mesh"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="0.5 0 0 0.5"/>
+        </default>
+        <default class="spawn">
+            <geom group="0" rgba="1 1 1 0.5" contype="0" conaffinity="0"/>
+            <site group="0" rgba="1 1 1 0.5"/>
+        </default>
+    </default>
+    <worldbody>
+        <body>
+            <body name="object">
+                <geom mesh="Window042_vis" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="Window042_material"/>
+                <geom class="collision" type="box" pos="-4.8321729991585016e-05 -0.0004078543861396611 0.0006336957449093461" size="0.3984239399433136 0.051957402378320694 0.33910033106803894" quat="1.0 0.0 0.0 0.0"/>
+                <body name="Window042_Clear">
+                    <geom mesh="Window042_Clear_vis" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="Window042_Clear_material"/>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    <actuator/>
+</mujoco>

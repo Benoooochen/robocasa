@@ -154,11 +154,16 @@ class CabinetPanel(MujocoXMLObject):
             handle_class = RectangularHandle
             vpad = 0.20
             hpad = 0.05
+        elif self.handle_type == "lw_handle":
+            handle_class = LwHandle
+            vpad = 0.20
+            hpad = 0.05
         else:
             raise NotImplementedError
 
         panel_w = self.size[0]
         panel_h = self.size[2]
+
 
         handle = handle_class(
             name="{}_handle".format(self.name),

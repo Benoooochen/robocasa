@@ -1,0 +1,632 @@
+room:
+  walls:
+    - name: wall_left_1
+      type: wall
+      size: [2.821228, 1.5, 0.02]
+      pos: [-0.001134, -2.823618, 1.5]
+      wall_side: left
+
+    - name: wall_left_1_backing
+      type: wall
+      backing: true
+      backing_extended: [False, False]
+      size: [2.821228, 1.5, 0.1]
+      pos: [-0.001134, -2.823618, 1.5]
+      wall_side: left
+
+    - name: wall_main_1
+      type: wall
+      size: [4.033552, 1.5, 0.02]
+      pos: [4.032442, -0.002413, 1.5]
+
+    - name: wall_main_1_backing
+      type: wall
+      backing: true
+      backing_extended: [True, False] 
+      size: [4.033552, 1.5, 0.1]
+      pos: [4.032442, -0.002413, 1.5]
+
+    - name: wall_right_2
+      type: wall
+      size: [1.387158, 1.5, 0.02]
+      pos: [8.065995, -4.257732, 1.5]
+      wall_side: right
+
+    - name: wall_right_2_backing
+      type: wall
+      backing: true
+      backing_extended:  [False, False]
+      size: [1.387158, 1.5, 0.1]
+      pos: [8.065995, -4.257732, 1.5]
+      wall_side: right
+
+    - name: wall_right_1
+      type: wall
+      size: [0.644798, 1.5, 0.02]
+      pos: [8.065997, -0.647233, 1.5]
+      wall_side: right
+
+    - name: wall_right_1_backing
+      type: wall
+      backing: true
+      backing_extended: [True, False] 
+      size: [0.644798, 1.5, 0.1]
+      pos: [8.065997, -0.647233, 1.5]
+      wall_side: right
+
+    - name: wall_right_3
+      type: wall
+      size: [0.70927, 0.298998, 0.02]
+      pos: [8.065997, -2.0813, 2.701001]
+      wall_side: right
+
+    - name: wall_right_3_backing
+      type: wall
+      backing: true
+      backing_extended: [False, False] 
+      size: [0.74927, 0.178998, 0.1]
+      pos: [8.065997, -2.0813, 2.821001]
+      wall_side: right
+
+  floor:
+    - name: floor_1
+      type: floor
+      size: [4.033606, 2.821287, 0.02]
+      pos: [4.032447, -2.823643, 0]
+
+    - name: floor_1_backing
+      type: floor
+      backing: true
+      size: [4.033606, 2.821287, 0.1]
+      pos: [4.032447, -2.823643, 0]
+
+
+main_group_1:
+  group_origin: [0, 0]
+  group_pos: [8.065994, -0.002435]
+  group_z_rot: -0.00014787912422672004
+  
+  # 顶层柜子 - 12个铰链柜
+  top_row_1:
+    - name: hingecabinet_1
+      type: hinge_cabinet
+      pos: [-0.9223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel005/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_2
+      type: hinge_cabinet
+      pos: [-1.5223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel006/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_3
+      type: hinge_cabinet
+      pos: [-2.1223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel007/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_4
+      type: hinge_cabinet
+      pos: [-2.7223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel008/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_5
+      type: hinge_cabinet
+      pos: [-3.3223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel009/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_6
+      type: hinge_cabinet
+      pos: [-3.9223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel010/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_7
+      type: hinge_cabinet
+      pos: [-4.5223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel011/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_8
+      type: hinge_cabinet
+      pos: [-5.1223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel012/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_9
+      type: hinge_cabinet
+      pos: [-5.7223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel013/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_10
+      type: hinge_cabinet
+      pos: [-6.3223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel014/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_11
+      type: hinge_cabinet
+      pos: [-6.9223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel015/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_12
+      type: hinge_cabinet
+      pos: [-7.5223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel016/model.xml',
+        'handle_vpos': 'bottom'}
+
+  # 中间层 - 12个单柜
+  middle_row_1:
+    - name: singlecabinet_1
+      type: single_cabinet
+      pos: [-0.9223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel017/model.xml'}
+    - name: singlecabinet_2
+      type: single_cabinet
+      pos: [-1.5223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel018/model.xml'}
+    - name: singlecabinet_3
+      type: single_cabinet
+      pos: [-2.1223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel019/model.xml'}
+    - name: singlecabinet_4
+      type: single_cabinet
+      pos: [-2.7223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel020/model.xml'}
+    - name: singlecabinet_5
+      type: single_cabinet
+      pos: [-3.3223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel021/model.xml'}
+    - name: singlecabinet_6
+      type: single_cabinet
+      pos: [-3.9223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel022/model.xml'}
+    - name: singlecabinet_7
+      type: single_cabinet
+      pos: [-4.5223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel023/model.xml'}
+    - name: singlecabinet_8
+      type: single_cabinet
+      pos: [-5.1223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel024/model.xml'}
+    - name: singlecabinet_9
+      type: single_cabinet
+      pos: [-5.7223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel025/model.xml'}
+    - name: singlecabinet_10
+      type: single_cabinet
+      pos: [-6.3223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel026/model.xml'}
+    - name: singlecabinet_11
+      type: single_cabinet
+      pos: [-6.9223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel027/model.xml'}
+    - name: singlecabinet_12
+      type: single_cabinet
+      pos: [-7.5223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel028/model.xml'}
+
+  # 底层 - 12个counter
+  bottom_row_1:
+    - name: counter_1
+      type: counter
+      pos: [-0.9223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_2
+      type: counter
+      pos: [-1.5223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_3
+      type: counter
+      pos: [-2.1223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_4
+      type: counter
+      pos: [-2.7223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_5
+      type: counter
+      pos: [-3.3223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_6
+      type: counter
+      pos: [-3.9223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_7
+      type: counter
+      pos: [-4.5223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_8
+      type: counter
+      pos: [-5.1223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_9
+      type: counter
+      pos: [-5.7223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_10
+      type: counter
+      pos: [-6.3223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_11
+      type: counter
+      pos: [-6.9223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_12
+      type: counter
+      pos: [-7.5223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+
+  # 底层柜子 - 12个stack
+  bottom_row_cabinets_1:
+    - name: stack_01
+      type: stack
+      pos: [-0.9223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel029/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_02
+      type: stack
+      pos: [-1.5223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel030/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_03
+      type: stack
+      pos: [-2.1223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel031/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_04
+      type: stack
+      pos: [-2.7223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel032/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_05
+      type: stack
+      pos: [-3.3223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel033/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_06
+      type: stack
+      pos: [-3.9223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel034/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_07
+      type: stack
+      pos: [-4.5223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel035/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_08
+      type: stack
+      pos: [-5.1223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel036/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_09
+      type: stack
+      pos: [-5.7223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel037/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_10
+      type: stack
+      pos: [-6.3223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel038/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_11
+      type: stack
+      pos: [-6.9223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel039/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_12
+      type: stack
+      pos: [-7.5223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel040/model.xml',
+        'handle_vpos': 'top'}}}
+
+
+right_group_1:
+  group_origin: [0, 0]
+  group_pos: [8.065998, -5.64489]
+  group_z_rot: -1.5709476897783523
+  
+  # 顶层柜子 - 3个铰链柜
+  top_row_2:
+    - name: hingecabinet_r_1
+      type: hinge_cabinet
+      pos: [-0.9223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel041/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_r_2
+      type: hinge_cabinet
+      pos: [-1.5223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel042/model.xml',
+        'handle_vpos': 'bottom'}
+    - name: hingecabinet_r_3
+      type: hinge_cabinet
+      pos: [-2.1223, -0.2, 2.30]
+      size: [0.6, 0.4, 0.92]
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel043/model.xml',
+        'handle_vpos': 'bottom'}
+  
+  # 中间层 - 3个单柜
+  middle_row_2:
+    - name: singlecabinet_r_1
+      type: single_cabinet
+      pos: [-0.9223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel044/model.xml'}
+    - name: singlecabinet_r_2
+      type: single_cabinet
+      pos: [-1.5223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel045/model.xml'}
+    - name: singlecabinet_r_3
+      type: single_cabinet
+      pos: [-2.1223, -0.15, 1.38]
+      size: [0.6, 0.35, 0.92]
+      orientation: left
+      panel_config: {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel046/model.xml'}
+
+  # 底层 - 3个counter
+  bottom_row_2:
+    - name: counter_r_1
+      type: counter
+      pos: [-0.9223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_r_2
+      type: counter
+      pos: [-1.5223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+    - name: counter_r_3
+      type: counter
+      pos: [-2.1223, -0.325, 0.46]
+      size: [0.6, 0.65, 0.92]
+
+  # 底层柜子 - 3个stack
+  bottom_row_cabinets_2:
+    - name: stack_r_1
+      type: stack
+      pos: [-0.9223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel047/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_r_2
+      type: stack
+      pos: [-1.5223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel048/model.xml',
+        'handle_vpos': 'top'}}}
+    - name: stack_r_3
+      type: stack
+      pos: [-2.1223, -0.325, 0.47]
+      size: [0.6, 0.6, 0.84]
+      levels: [hinge_cabinet]
+      percentages: [1]
+      configs: {'hinge_cabinet': {'panel_config': {
+        'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel049/model.xml',
+        'handle_vpos': 'top'}}}
+
+left_group_1:
+  group_origin: [0, 0]
+  group_pos: [-0.001099, -5.644852]
+  group_z_rot: 1.570623497920938
+  
+  # 第一排窗户 - 使用 Window025-034
+  top_row_3:
+    - name: window_1
+      type: extra_window
+      xml: 'fixtures/windows/Window025/model.xml'
+      scale: 0.3
+      pos: [1.0, -0.02, 2.30]
+    - name: window_2
+      type: extra_window
+      xml: 'fixtures/windows/Window026/model.xml'
+      scale: 0.3
+      pos: [2.0, -0.02, 2.30]
+    - name: window_3
+      type: extra_window
+      xml: 'fixtures/windows/Window027/model.xml'
+      scale: 0.3
+      pos: [3.0, -0.02, 2.30]
+    - name: window_4
+      type: extra_window
+      xml: 'fixtures/windows/Window028/model.xml'
+      scale: 0.3
+      pos: [4.0, -0.02, 2.30]
+    - name: window_5
+      type: extra_window
+      xml: 'fixtures/windows/Window029/model.xml'
+      scale: 0.3
+      pos: [5.0, -0.02, 2.30]
+
+
+  # 第二排窗户 - 使用 Window035-044
+  middle_row_3:
+    - name: window_6
+      type: extra_window
+      xml: 'fixtures/windows/Window030/model.xml'
+      scale: 0.3
+      pos: [1.0, -0.02, 1.38]
+    - name: window_7
+      type: extra_window
+      xml: 'fixtures/windows/Window031/model.xml'
+      scale: 0.3
+      pos: [2.0, -0.02, 1.38]
+    - name: window_8
+      type: extra_window
+      xml: 'fixtures/windows/Window032/model.xml'
+      scale: 0.3
+      pos: [3.0, -0.02, 1.38]
+    - name: window_9
+      type: extra_window
+      xml: 'fixtures/windows/Window033/model.xml'
+      scale: 0.3
+      pos: [4.0, -0.02, 1.38]
+    - name: window_10
+      type: extra_window
+      xml: 'fixtures/windows/Window034/model.xml'
+      scale: 0.3
+      pos: [5.0, -0.02, 1.38]
+
+
+
+  # 第三排窗户 - 使用 Window045-054
+  bottom_row_3:
+    - name: window_11
+      type: extra_window
+      xml: 'fixtures/windows/Window035/model.xml'
+      scale: 0.3
+      pos: [1.0, -0.02, 0.46]
+    - name: window_12
+      type: extra_window
+      xml: 'fixtures/windows/Window036/model.xml'
+      scale: 0.3
+      pos: [2.0, -0.02, 0.46]
+    - name: window_13
+      type: extra_window
+      xml: 'fixtures/windows/Window037/model.xml'
+      scale: 0.3
+      pos: [3.0, -0.02, 0.46]
+    - name: window_14
+      type: extra_window
+      xml: 'fixtures/windows/Window038/model.xml'
+      scale: 0.3
+      pos: [4.0, -0.02, 0.46]
+    - name: window_15
+      type: extra_window
+      xml: 'fixtures/windows/Window039/model.xml'
+      scale: 0.3
+      pos: [5.0, -0.02, 0.46]
+
+
+stool_group_1:
+  group_origin: [0, 0]
+  group_pos: [5.370265, -4.365058]
+  group_z_rot: 3.1414378603285478
+  stool_row:
+    - name: stool_2
+      type: stool
+      pos: [0.929, -0.2499, 0.5]
+
+    - name: stool_3
+      type: stool
+      pos: [0.25, -0.25, 0.5]
+
+    - name: stool_1
+      type: stool
+      pos: [1.608, -0.2498, 0.5]
