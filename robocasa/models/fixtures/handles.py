@@ -5,7 +5,7 @@ from xml.etree import ElementTree as ET
 import numpy as np
 from robosuite.utils.mjcf_utils import array_to_string as a2s
 from robosuite.utils.mjcf_utils import find_elements, xml_path_completion
-
+from robosuite.utils.mjcf_utils import string_to_array as s2a
 import robocasa
 from robocasa.models.objects import MujocoXMLObject
 from robocasa.models.fixtures.fixture import get_texture_name_from_file
@@ -463,19 +463,52 @@ class LwHandle(ExtraHandle):
                  **kwargs):
         super().__init__(xml=xml, name=name, orientation=orientation, *args, **kwargs)
 
+    def _get_components(self):
+        """
+        get components of handle
+        """
+        geom_names = ["handle_connector"]
+        body_names = ["object"]
+        joint_names = []
+        return self._get_elements_by_name(geom_names, body_names, joint_names)
+    
+    def get_y_offset(self):
+        """
+        get y offset of handle
+        """
+        geoms, bodies, joints = self._get_components()
+        
+        # check if handle_connector is successfully obtained
+        handle_connector = geoms.get("handle_connector")
+        if not handle_connector:
+            print(f"warning: handle_connector geom not found")
+            return
+            
+        # get attributes of handle_connector
+        geom = handle_connector[0]
+        pos_str = geom.get("pos")
+        size_str = geom.get("size")
+        if not pos_str or not size_str:
+            print(f"warning: handle_connector missing pos or size attribute")
+            return
+
+        pos = [float(x) for x in pos_str.split()]
+        size = [float(x) for x in size_str.split()]
+        
+        # calculate actual offset: position + size
+        if pos[1] < 0:
+            offset = size[1] - pos[1]
+        else:
+            offset = size[1] + pos[1]
+        
+        return -offset
+
     def _create_handle(self):
         """
-        计算并设置把手的位置和大小，绕 y 轴旋转 90 度
+        create handle, rotate handle to the right direction
         """
-        # 调整把手大小（如果需要）
-        if self.panel_h < self.length + 2 * self.handle_pad:
-            self.length = self.panel_h - 2 * self.handle_pad
-
-
+        # set handle direction
         if not self.orientation == "vertical":
-            # 绕 y 轴旋转 90 度（π/2 弧度）
+            # rotate 90 degrees around y axis (π/2 radians)
             euler = np.array([0, np.pi/2, 0])
             self._obj.set("euler", a2s(euler))
-
-        
-        

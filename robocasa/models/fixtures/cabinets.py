@@ -205,7 +205,7 @@ class Cabinet(ProcGenFixture):
         dg = self.door_gap
 
         panel_config = deepcopy(self.panel_config)
-        print(panel_config)
+        
         panel_config["handle_hpos"] = handle_hpos
         panel_config["handle_vpos"] = handle_vpos
 

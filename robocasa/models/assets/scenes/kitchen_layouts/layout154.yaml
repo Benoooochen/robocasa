@@ -95,6 +95,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel005/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle005/model.xml'}
     - name: hingecabinet_2
       type: hinge_cabinet
       pos: [-1.5223, -0.2, 2.30]
@@ -102,6 +103,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel006/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle006/model.xml'}
     - name: hingecabinet_3
       type: hinge_cabinet
       pos: [-2.1223, -0.2, 2.30]
@@ -109,6 +111,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel007/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle007/model.xml'}
     - name: hingecabinet_4
       type: hinge_cabinet
       pos: [-2.7223, -0.2, 2.30]
@@ -116,6 +119,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel008/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle008/model.xml'}
     - name: hingecabinet_5
       type: hinge_cabinet
       pos: [-3.3223, -0.2, 2.30]
@@ -123,6 +127,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel009/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle009/model.xml'}
     - name: hingecabinet_6
       type: hinge_cabinet
       pos: [-3.9223, -0.2, 2.30]
@@ -130,6 +135,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel010/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle010/model.xml'}
     - name: hingecabinet_7
       type: hinge_cabinet
       pos: [-4.5223, -0.2, 2.30]
@@ -137,6 +143,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel011/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle011/model.xml'}
     - name: hingecabinet_8
       type: hinge_cabinet
       pos: [-5.1223, -0.2, 2.30]
@@ -144,6 +151,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel012/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle012/model.xml'}
     - name: hingecabinet_9
       type: hinge_cabinet
       pos: [-5.7223, -0.2, 2.30]
@@ -151,6 +159,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel013/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle013/model.xml'}
     - name: hingecabinet_10
       type: hinge_cabinet
       pos: [-6.3223, -0.2, 2.30]
@@ -158,6 +167,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel014/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle014/model.xml'}
     - name: hingecabinet_11
       type: hinge_cabinet
       pos: [-6.9223, -0.2, 2.30]
@@ -165,6 +175,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel015/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle015/model.xml'}
     - name: hingecabinet_12
       type: hinge_cabinet
       pos: [-7.5223, -0.2, 2.30]
@@ -172,6 +183,7 @@ main_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel016/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle016/model.xml'}
 
   # 中间层 - 12个单柜
   middle_row_1:
@@ -182,6 +194,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel017/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle017/model.xml'}
     - name: singlecabinet_2
       type: single_cabinet
       pos: [-1.5223, -0.15, 1.38]
@@ -189,6 +202,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel018/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle018/model.xml'}
     - name: singlecabinet_3
       type: single_cabinet
       pos: [-2.1223, -0.15, 1.38]
@@ -196,6 +210,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel019/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle019/model.xml'}
     - name: singlecabinet_4
       type: single_cabinet
       pos: [-2.7223, -0.15, 1.38]
@@ -203,6 +218,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel020/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle020/model.xml'}
     - name: singlecabinet_5
       type: single_cabinet
       pos: [-3.3223, -0.15, 1.38]
@@ -210,6 +226,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel021/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle021/model.xml'}
     - name: singlecabinet_6
       type: single_cabinet
       pos: [-3.9223, -0.15, 1.38]
@@ -217,6 +234,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel022/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle022/model.xml'}
     - name: singlecabinet_7
       type: single_cabinet
       pos: [-4.5223, -0.15, 1.38]
@@ -224,6 +242,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel023/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle023/model.xml'}
     - name: singlecabinet_8
       type: single_cabinet
       pos: [-5.1223, -0.15, 1.38]
@@ -231,6 +250,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel024/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle024/model.xml'}
     - name: singlecabinet_9
       type: single_cabinet
       pos: [-5.7223, -0.15, 1.38]
@@ -238,6 +258,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel025/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle025/model.xml'}
     - name: singlecabinet_10
       type: single_cabinet
       pos: [-6.3223, -0.15, 1.38]
@@ -245,6 +266,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel026/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle026/model.xml'}
     - name: singlecabinet_11
       type: single_cabinet
       pos: [-6.9223, -0.15, 1.38]
@@ -252,6 +274,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel027/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle027/model.xml'}
     - name: singlecabinet_12
       type: single_cabinet
       pos: [-7.5223, -0.15, 1.38]
@@ -259,6 +282,7 @@ main_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel028/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle028/model.xml'}
 
   # 底层 - 12个counter
   bottom_row_1:
@@ -321,7 +345,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel029/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle029/model.xml'}}}
     - name: stack_02
       type: stack
       pos: [-1.5223, -0.325, 0.47]
@@ -330,7 +355,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel030/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle030/model.xml'}}}
     - name: stack_03
       type: stack
       pos: [-2.1223, -0.325, 0.47]
@@ -339,7 +365,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel031/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle031/model.xml'}}}
     - name: stack_04
       type: stack
       pos: [-2.7223, -0.325, 0.47]
@@ -348,7 +375,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel032/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle032/model.xml'}}}
     - name: stack_05
       type: stack
       pos: [-3.3223, -0.325, 0.47]
@@ -357,7 +385,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel033/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle033/model.xml'}}}
     - name: stack_06
       type: stack
       pos: [-3.9223, -0.325, 0.47]
@@ -366,7 +395,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel034/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle034/model.xml'}}}
     - name: stack_07
       type: stack
       pos: [-4.5223, -0.325, 0.47]
@@ -375,7 +405,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel035/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle035/model.xml'}}}
     - name: stack_08
       type: stack
       pos: [-5.1223, -0.325, 0.47]
@@ -384,7 +415,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel036/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle036/model.xml'}}}
     - name: stack_09
       type: stack
       pos: [-5.7223, -0.325, 0.47]
@@ -393,7 +425,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel037/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle037/model.xml'}}}
     - name: stack_10
       type: stack
       pos: [-6.3223, -0.325, 0.47]
@@ -402,7 +435,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel038/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle038/model.xml'}}}
     - name: stack_11
       type: stack
       pos: [-6.9223, -0.325, 0.47]
@@ -411,7 +445,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel039/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle039/model.xml'}}}
     - name: stack_12
       type: stack
       pos: [-7.5223, -0.325, 0.47]
@@ -420,7 +455,8 @@ main_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel040/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle040/model.xml'}}}
 
 
 right_group_1:
@@ -437,6 +473,7 @@ right_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel041/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle041/model.xml'}
     - name: hingecabinet_r_2
       type: hinge_cabinet
       pos: [-1.5223, -0.2, 2.30]
@@ -444,6 +481,7 @@ right_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel042/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle042/model.xml'}
     - name: hingecabinet_r_3
       type: hinge_cabinet
       pos: [-2.1223, -0.2, 2.30]
@@ -451,6 +489,7 @@ right_group_1:
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel043/model.xml',
         'handle_vpos': 'bottom'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle043/model.xml'}
   
   # 中间层 - 3个单柜
   middle_row_2:
@@ -461,6 +500,7 @@ right_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel044/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle044/model.xml'}
     - name: singlecabinet_r_2
       type: single_cabinet
       pos: [-1.5223, -0.15, 1.38]
@@ -468,6 +508,7 @@ right_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel045/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle045/model.xml'}
     - name: singlecabinet_r_3
       type: single_cabinet
       pos: [-2.1223, -0.15, 1.38]
@@ -475,6 +516,7 @@ right_group_1:
       orientation: left
       panel_config: {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel046/model.xml'}
+      handle_config: {'xml': 'fixtures/handles/CabinetHandle046/model.xml'}
 
   # 底层 - 3个counter
   bottom_row_2:
@@ -501,7 +543,8 @@ right_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel047/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle047/model.xml'}}}
     - name: stack_r_2
       type: stack
       pos: [-1.5223, -0.325, 0.47]
@@ -510,7 +553,8 @@ right_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel048/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle048/model.xml'}}}
     - name: stack_r_3
       type: stack
       pos: [-2.1223, -0.325, 0.47]
@@ -519,7 +563,8 @@ right_group_1:
       percentages: [1]
       configs: {'hinge_cabinet': {'panel_config': {
         'xml': 'fixtures/cabinets/cabinet_panels/CabinetDoorPanel049/model.xml',
-        'handle_vpos': 'top'}}}
+        'handle_vpos': 'top'},
+        'handle_config': {'xml': 'fixtures/handles/CabinetHandle049/model.xml'}}}
 
 left_group_1:
   group_origin: [0, 0]

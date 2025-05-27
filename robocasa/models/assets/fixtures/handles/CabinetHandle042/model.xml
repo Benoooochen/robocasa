@@ -22,7 +22,7 @@
         <body>
             <body name="object">
                 <geom mesh="mesh" type="mesh" solimp="0.998 0.998 0.001" solref="0.001 1" density="100" friction="0.95 0.3 0.1" class="visual" material="mat"/>
-                <geom class="collision" type="cylinder" pos="0.0 -0.0030496064573526382 -0.00028252415359020233" size="0.026180727407336235 0.04154050350189209" quat="1.0 0.0 0.0 0.0"/>
+                <geom class="collision" type="cylinder" pos="0.0 -0.0030496064573526382 -0.00028252415359020233" size="0.026180727407336235 0.04154050350189209" quat="1.0 0.0 0.0 0.0" name="handle_connector"/>
             </body>
         </body>
     </worldbody>

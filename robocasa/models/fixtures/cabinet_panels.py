@@ -1,5 +1,7 @@
 import abc
 import xml
+import os
+import glob
 
 from robosuite.utils.mjcf_utils import array_to_string as a2s
 from robosuite.utils.mjcf_utils import find_elements, xml_path_completion
@@ -173,6 +175,11 @@ class CabinetPanel(MujocoXMLObject):
         )
         handle_elem = handle.get_obj()
 
+        if self.handle_type == "lw_handle":
+            handle_y = handle.get_y_offset()
+        else:
+            handle_y = 0.0
+
         if self.handle_vpos == "bottom":
             handle_z = -(panel_h / 2 - vpad)
         elif self.handle_vpos == "top":
@@ -191,7 +198,7 @@ class CabinetPanel(MujocoXMLObject):
         else:
             raise NotImplementedError
 
-        handle_elem.set("pos", a2s([handle_x, 0, handle_z]))
+        handle_elem.set("pos", a2s([handle_x, handle_y, handle_z]))
 
         parent_body = self.get_obj()
 
@@ -661,7 +668,14 @@ class LwCabinetPanel(CabinetPanel):
             xml = kwargs.pop('xml')
         else:
             xml = self.default_xml
+
+        # set xml_path
+        self._xml_path = xml_path_completion(xml, root=robocasa.models.assets_root)
+
         super().__init__(xml, *args, **kwargs)
+        
+        # set texture from model
+        self._set_texture_from_model()
 
     @property
     def default_xml(self):
@@ -674,17 +688,49 @@ class LwCabinetPanel(CabinetPanel):
         """
         geom_names = ["region_main"]
         return self._get_elements_by_name(geom_names)[0]
-
+    
     def _set_texture(self):
-        """
-        设置面板的纹理。如果模型文件夹中已有默认纹理，则优先使用默认纹理。
-        """
-        # 如果没有指定新的纹理，直接返回，保持模型原有的纹理
-        if self.texture is None:
-            return
-        
-        # 如果指定了新的纹理，则调用父类方法覆盖原有纹理
-        return super()._set_texture()
+        pass
+
+
+    def _set_texture_from_model(self):
+        # override the default one.
+        model_dir = os.path.dirname(self._xml_path)
+
+        visuals_dir = os.path.join(model_dir, "visuals")
+
+        # find png/jpg texture files
+        candidates = glob.glob(os.path.join(visuals_dir, "*.png")) + \
+                     glob.glob(os.path.join(visuals_dir, "*.jpg"))
+
+        if candidates:
+            # take the first found image
+            texture_path = os.path.relpath(candidates[0], robocasa.models.assets_root)
+            self.texture = texture_path
+        else:
+            print(f"warning: no texture found in {visuals_dir}")
+        self.texture = xml_path_completion(
+            self.texture, root=robocasa.models.assets_root
+        )
+        texture = find_elements(
+            self.root, tags="texture", attribs={"name": "tex"}, return_first=True
+        )
+        tex_is_2d = texture.get("type", None) == "2d"
+        suffix_path = self.texture.split("fixtures/")[1]
+        tex_name = suffix_path.split(".")[0]
+        if tex_is_2d:
+            tex_name += "_2d"
+        texture.set("name", tex_name)
+        texture.set("file", self.texture)
+
+        material = find_elements(
+            self.root,
+            tags="material",
+            attribs={"name": "{}_mat".format(self.name)},
+            return_first=True,
+        )
+        material.set("name", "{}_mat".format(self.name))
+        material.set("texture", tex_name)
 
     def _create_panel(self):
         """

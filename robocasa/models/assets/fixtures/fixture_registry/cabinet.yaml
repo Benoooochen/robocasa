@@ -175,7 +175,7 @@ lw_cabinet_panel:
     xml: fixtures/cabinets/cabinet_panels/CabinetDoorPanel048/model.xml
   handle_type: lw_handle
   handle_config:
-    xml: fixtures/handles/CabinetHandle005/model.xml
+    xml: fixtures/handles/CabinetHandle006/model.xml
 
 
 
